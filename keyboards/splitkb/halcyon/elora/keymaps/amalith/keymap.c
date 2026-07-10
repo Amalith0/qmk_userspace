@@ -113,3 +113,20 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    for (uint8_t i = led_min; i < led_max; i++) {
+        switch(get_highest_layer(layer_state|default_layer_state)) {
+            case 2:
+                rgb_matrix_set_color(i, 93, 63, 211);
+                break;
+            case 1:
+                rgb_matrix_set_color(i, 93, 63, 211);
+                break;
+            default:
+                rgb_matrix_set_color(i, 93, 63, 211);
+                break;
+        }
+    }
+    return false;
+}
