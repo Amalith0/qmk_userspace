@@ -40,12 +40,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_QWERTY] = LAYOUT_elora_hlc(
-     KC_GRAVE, KC_1 ,  KC_2   , KC_3  ,   KC_4     ,   KC_5 ,                                        KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,  KC_0 ,  KC_RBRC,
-     KC_TAB  , KC_Q ,  KC_W   , KC_E  ,   KC_R     ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_LBRC,
+     KC_GRAVE, KC_1 ,  KC_2   , KC_3  ,   KC_4     ,   KC_5 ,                                        KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,  KC_0 ,  KC_F5,
+     KC_TAB  , KC_Q ,  KC_W   , KC_E  ,   KC_R     ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_QUOT,
      KC_LSFT , KC_A ,  KC_S   , KC_D  ,   KC_F     ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,KC_RSFT,
-     KC_LCTL , KC_Z ,  KC_X   , KC_C  ,   KC_V     ,   KC_B , CW_TOGG, LCTL(KC_V),       LCTL(KC_C), KC_BSPC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_QUOT,
-                                 QK_LOCK,TT(_SYMBOLS), KC_SPC , KC_LALT, KC_ESC,     TG(_GAME), KC_ENT ,KC_SPC, QK_REP, KC_DEL,
-     KC_PAUSE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
+     KC_LCTL , KC_Z ,  KC_X   , KC_C  ,   KC_V     ,   KC_B , CW_TOGG, LCTL(KC_V),       LCTL(KC_C), KC_DEL, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, LSG(KC_S),
+                                 QK_LOCK,TT(_SYMBOLS), KC_SPC , QK_REP, KC_ESC,     TG(_GAME), KC_ENT ,KC_SPC, KC_BSPC, LCTL(KC_I),
+     LALT(KC_TAB), KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
 /*
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_G , KC_LSFT ,  KC_A   ,  KC_S ,   KC_D ,   KC_F ,                                        _______,   _______ ,  _______ ,   _______ ,  _______ , _______,
      KC_B ,KC_LCTL, KC_Z   ,  KC_X  ,   KC_C ,   KC_V , _______,_______,     _______  , _______, _______,   _______ ,  _______ ,   _______ ,  _______ , _______,
                                  _______, _______, _______, _______ , _______   ,     _______    , _______ ,_______, _______, _______,
-     KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
+     _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
 /*
@@ -96,19 +96,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYMBOLS] = LAYOUT_elora_hlc(
-     _______  , _______ ,  _______   ,  LALT(KC_F4)  ,   _______ ,   _______ ,                                        _______ ,  _______ ,  _______ ,   _______ ,  LSG(KC_MINUS) , _______ ,
-     _______  , _______ ,  LSG(KC_S)   ,  KC_F5  ,   _______ ,   _______ ,                                        _______,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 ,LSFT(KC_MINS), KC_PLUS,
-     _______ , _______ ,  KC_LEFT   ,  KC_UP  ,   KC_RGHT ,   _______ ,                                        _______,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 ,  KC_MINS , KC_HOME,
-     _______ , _______ ,  _______   ,  KC_DOWN  ,   _______ ,   _______ , _______,_______,     _______  , _______, KC_KP_0,   KC_KP_1 ,KC_KP_2, KC_KP_3 ,KC_BSLS, KC_END,
-                                 _______, _______, _______, _______ , _______   ,     _______    , _______ ,_______, _______, _______,
-     KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
+     _______    , _______   ,  _______    , LALT(KC_F4)   ,   _______    ,   _______ ,                                                 _______ ,  _______ ,  _______ ,   KC_LBRC ,  KC_RBRC , KC_HOME ,
+     LCTL(KC_Y)    , _______   ,  _______  ,    _______      ,   _______    ,   _______ ,                                                 KC_EQL,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
+     LCTL(KC_Z)    , LCTL(KC_S)   ,  KC_LEFT    , KC_UP         ,   KC_RGHT    ,   KC_PAUSE ,                                                 KC_MINS,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 , KC_BSLS , _______,
+     _______    , _______   ,  _______    , KC_DOWN       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______, LSFT(KC_MINS),   KC_KP_1 ,KC_KP_2, KC_KP_3 , KC_KP_0,_______,
+                                            _______       ,   _______    ,   _______ , KC_LALT , _______ ,   _______  , _______        ,_______, _______, _______,
+     _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_VOLD, LALT(KC_TAB)),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
+    [0] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(LSFT(KC_TAB), KC_TAB),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
     [1] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
     [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
@@ -118,13 +118,13 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     for (uint8_t i = led_min; i < led_max; i++) {
         switch(get_highest_layer(layer_state|default_layer_state)) {
             case 2:
-                rgb_matrix_set_color(i, 93, 63, 211);
+                rgb_matrix_set_color(i, 255,191,0);
                 break;
             case 1:
-                rgb_matrix_set_color(i, 93, 63, 211);
+                rgb_matrix_set_color(i, 15,82,186);
                 break;
             default:
-                rgb_matrix_set_color(i, 93, 63, 211);
+                rgb_matrix_set_color(i, 108,59,170);
                 break;
         }
     }
