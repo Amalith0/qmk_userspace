@@ -9,11 +9,6 @@ enum layers {
     _SYMBOLS,
 };
 
-// Aliases for readability
-#define QWERTY   DF(_QWERTY)
-#define GAME     DF(_GAME)
-#define SYMBOLS  DF(_SYMBOLS)
-
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
 // produces the key `tap` when tapped (i.e. pressed and released).
@@ -49,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_TAB  , KC_Q ,  KC_W   , KC_E  ,   KC_R     ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_END,
      KC_LSFT , KC_A ,  KC_S   , KC_D  ,   KC_F     ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,KC_RSFT,
      KC_LCTL , KC_Z ,  KC_X   , KC_C  ,   KC_V     ,   KC_B , CW_TOGG, LCTL(KC_V),       LCTL(KC_C), KC_BSPC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_QUOT,
-                                 QK_LOCK,TT(SYMBOLS), KC_SPC , KC_LALT, KC_ESC,     TG(GAME), KC_ENT ,KC_SPC, QK_REP, KC_DEL,
+                                 QK_LOCK,TT(_SYMBOLS), KC_SPC , KC_LALT, KC_ESC,     TG(_GAME), KC_ENT ,KC_SPC, QK_REP, KC_DEL,
      KC_PAUSE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
