@@ -130,3 +130,15 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     }
     return false;
 }
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case MT(MOD_LALT, LALT(KC_TAB)):
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(LALT(KC_TAB)); 
+                return false;        // Return false to ignore further processing of key
+            }
+            break;
+    }
+    return true;
+}
