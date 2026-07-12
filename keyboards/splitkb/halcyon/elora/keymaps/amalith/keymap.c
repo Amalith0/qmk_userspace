@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_GRAVE, KC_1 ,  KC_2   , KC_3  ,   KC_4     ,   KC_5 ,                                        KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,  KC_0 ,  KC_F5,
      KC_TAB  , KC_Q ,  KC_W   , KC_E  ,   KC_R     ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_QUOT,
      KC_LSFT , KC_A ,  KC_S   , KC_D  ,   KC_F     ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,KC_RSFT,
-     KC_LCTL , KC_Z ,  KC_X   , KC_C  ,   KC_V     ,   KC_B , CW_TOGG, LCTL(KC_V),       LCTL(KC_C), KC_DEL, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, LSG(KC_S),
-                                 QK_LOCK,TT(_SYMBOLS), KC_SPC , QK_REP, KC_ESC,     TG(_GAME), KC_ENT ,KC_SPC, KC_BSPC, LCTL(KC_I),
-     MT(MOD_LALT, LALT(KC_TAB)), KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
+     KC_LCTL , KC_Z ,  KC_X   , KC_C  ,   KC_V     ,   KC_B , KC_LBRC, CW_TOGG,      KC_DEL , KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_EQL,
+                                 QK_LOCK,TT(_SYMBOLS), KC_SPC , QK_REP, KC_ESC,     TG(_GAME), KC_ENT ,KC_SPC, KC_BSPC, LSG(KC_S),
+     MT(MOD_LALT, LGUI(KC_TAB)), KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
     [_GAME] = LAYOUT_elora_hlc(
@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT_elora_hlc(
-     _______    , _______   ,  _______    , LALT(KC_F4)   ,   _______    ,   _______ ,                                                 _______ ,  _______ ,  _______ ,   KC_LBRC ,  KC_RBRC , KC_HOME ,
-        _______ , LCTL(KC_A)   ,  LCTL(KC_I)  ,     _______     ,    _______   ,   KC_F1 ,                                                 KC_EQL,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
+     LCTL(KC_C)    , _______   ,  _______    , LALT(KC_F4)   ,   _______    ,   _______ ,                                                 _______ ,  _______ ,  _______ ,  _______  ,  _______ , KC_HOME ,
+        LCTL(KC_V) , LCTL(KC_A)   ,  LCTL(KC_I)  ,     _______     ,    LALT(KC_TAB)   ,   KC_F1 ,                                                 _______,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
         _______ , LCTL(KC_S)   ,  KC_LEFT    , KC_UP         ,   KC_RGHT    ,   KC_PAUSE ,                                                 KC_MINS,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 , KC_BSLS , _______,
      _______    , LCTL(KC_Y)   ,  LCTL(KC_Z)    , KC_DOWN       ,   LALT(KC_LSFT)    ,   LCTL(KC_F) , _______ , _______ ,   _______  , _______, LSFT(KC_MINS),   KC_KP_1 ,KC_KP_2, KC_KP_3 , KC_KP_0,_______,
                                             _______       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______        ,_______, _______, _______,
