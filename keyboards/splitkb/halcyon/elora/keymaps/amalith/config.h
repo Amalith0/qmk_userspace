@@ -3,3 +3,7 @@
 
 // Tap/hold
 #define TAPPING_TOGGLE 2
+#define PERMISSIVE_HOLD
+
+// RGB
+#define RGB_MATRIX_TIMEOUT 1800000
