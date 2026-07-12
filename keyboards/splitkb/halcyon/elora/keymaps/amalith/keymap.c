@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYMBOLS] = LAYOUT_elora_hlc(
      _______    , _______   ,  _______    , LALT(KC_F4)   ,   _______    ,   _______ ,                                                 _______ ,  _______ ,  _______ ,   KC_LBRC ,  KC_RBRC , KC_HOME ,
-        _______ , LCTL(KC_A)   ,  LCTL(KC_I)  ,    LALT(KC_LSFT)      ,   _______    ,   KC_F1 ,                                                 KC_EQL,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
+        _______ , LCTL(KC_A)   ,  LCTL(KC_I)  ,     _______     ,   LALT(KC_LSFT)    ,   KC_F1 ,                                                 KC_EQL,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
         _______ , LCTL(KC_S)   ,  KC_LEFT    , KC_UP         ,   KC_RGHT    ,   KC_PAUSE ,                                                 KC_MINS,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 , KC_BSLS , _______,
      _______    , LCTL(KC_Y)   ,  LCTL(KC_Z)    , KC_DOWN       ,   _______    ,   LCTL(KC_F) , _______ , _______ ,   _______  , _______, LSFT(KC_MINS),   KC_KP_1 ,KC_KP_2, KC_KP_3 , KC_KP_0,_______,
                                             _______       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______        ,_______, _______, _______,
