@@ -38,10 +38,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT_elora_hlc(
-     LCTL(KC_C)    , C(S(KC_1))   ,  C(S(KC_2))    ,  C(S(KC_3))  ,   _______    ,   LALT(KC_F4) ,                                                 _______ ,  _______ ,  _______ ,  _______  ,  _______ , KC_HOME ,
-        LCTL(KC_V) , LCTL(KC_A)   ,  LCTL(KC_I)  ,     KC_UP     ,    LALT(KC_TAB)   ,   KC_F1 ,                                                 _______,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
+        LCTL(KC_Y) , C(S(KC_1))   ,  C(S(KC_2))    ,  C(S(KC_3))  ,   _______    ,   LALT(KC_F4) ,                                                 _______ ,  _______ ,  _______ ,  _______  ,  _______ , KC_HOME ,
+        LCTL(KC_Z) , LCTL(KC_A)   ,  LCTL(KC_I)  ,     KC_UP     ,    LALT(KC_TAB)   ,   KC_F1 ,                                                 _______,   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
         _______ , LCTL(KC_S)   ,  KC_LEFT    ,      KC_DOWN    ,   KC_RGHT    ,   KC_PAUSE ,                                                 KC_MINS,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 , KC_BSLS , _______,
-     _______    , LCTL(KC_Y)   ,  LCTL(KC_Z)    , _______       ,   LALT(KC_LSFT)    ,   LCTL(KC_F) , _______ , _______ ,   _______  , _______, LSFT(KC_MINS),   KC_KP_1 ,KC_KP_2, KC_KP_3 , KC_KP_0,_______,
+     _______    , LCTL(KC_C)   ,  LCTL(KC_V)    , _______       ,   LALT(KC_LSFT)    ,   LCTL(KC_F) , _______ , _______ ,   _______  , _______, LSFT(KC_MINS),   KC_KP_1 ,KC_KP_2, KC_KP_3 , KC_KP_0,_______,
                                             _______       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______        ,_______, _______, _______,
      _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
     ),
