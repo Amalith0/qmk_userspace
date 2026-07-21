@@ -8,6 +8,7 @@ enum layers {
     _QWERTY = 0,
     _GAME,
     _SYMBOLS,
+    _MACRO,
 };
 
 // Layer keybinds
@@ -46,6 +47,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
+    [_MACRO] = LAYOUT_elora_hlc(
+        _______ , _______   ,  _______    ,  _______  ,   _______    ,   _______ ,                                                 _______ ,  _______ ,  _______ ,  _______  ,  _______ , _______ ,
+        _______ , _______   ,  _______  ,     _______     ,    _______   ,   _______ ,                                                 _______,   _______,  _______ ,   _______ , _______, _______,
+        _______ , _______   ,  _______    ,      _______    ,   _______    ,   _______ ,                                                 _______,   _______ ,  _______ ,   _______ , _______ , _______,
+     _______    ,  _______  ,  _______    , _______       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______, _______,   _______ ,_______, _______ , _______,_______,
+                                            _______       ,   _______    ,   _______ , _______ , _______ ,   _______  , _______        ,_______, _______, _______,
+     _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
+    ),
+
 };
 
 // Encoders
@@ -55,6 +65,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [0] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(LSFT(KC_TAB), KC_TAB),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
     [1] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
     [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
+    [3] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
 
@@ -85,6 +96,9 @@ const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = { 0, 1, 2, 3 };
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     for (uint8_t i = led_min; i < led_max; i++) {
         switch(get_highest_layer(layer_state|default_layer_state)) {
+            case 3:
+                rgb_matrix_set_color(i, 255,173,79);
+                break;
             case 2:
                 rgb_matrix_set_color(i, 255,191,0);
                 break;
