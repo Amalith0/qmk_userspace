@@ -10,4 +10,4 @@
 
 // Dynamic macros
 
-#define DYNAMIC_MACRO_DELAY 200
+#define DYNAMIC_MACRO_DELAY 50
