@@ -7,7 +7,7 @@
 
 // RGB
 #define RGB_MATRIX_TIMEOUT 1800000
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150
+#define RGB_MATRIX_DEFAULT_VAL 30
 
 // Dynamic macros
 
