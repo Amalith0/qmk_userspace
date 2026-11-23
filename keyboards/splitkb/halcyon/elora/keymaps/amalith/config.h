@@ -1,0 +1,14 @@
+// Caps word
+#define CAPS_WORD_INVERT_ON_SHIFT
+
+// Tap/hold
+#define TAPPING_TOGGLE 2
+#define PERMISSIVE_HOLD
+
+// RGB
+#define RGB_MATRIX_TIMEOUT 1800000
+#define RGB_MATRIX_DEFAULT_VAL 30
+
+// Dynamic macros
+
+#define DYNAMIC_MACRO_DELAY 50
