@@ -128,12 +128,19 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     rgb_matrix_set_color(48, 255, 0, 0);
     switch(get_highest_layer(layer_state|default_layer_state)) {
         case 2:
+            // Backlight
+            for (uint8_t i = 0; i < 5; i++) {
+                rgb_matrix_set_color(i, 231, 235, 0);
+            }
+            for (uint8_t i = 37; i < 42; i++) {
+                rgb_matrix_set_color(i, 231, 235, 0);
+            }
             // ALT-F4
             rgb_matrix_set_color(31, 255, 0, 0);
             // Undo Redo
             rgb_matrix_set_color(36, 255, 123, 122);
             rgb_matrix_set_color(30, 255, 123, 122);
-            // WASD
+            // Arrow Keys
             rgb_matrix_set_color(27, 231, 235, 0);
             rgb_matrix_set_color(20, 231, 235, 0);
             rgb_matrix_set_color(21, 231, 235, 0);
@@ -181,6 +188,13 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             }
             break;
         case 1:
+            // Backlight
+            for (uint8_t i = 0; i < 5; i++) {
+                rgb_matrix_set_color(i, 35, 184, 90);
+            }
+            for (uint8_t i = 37; i < 42; i++) {
+                rgb_matrix_set_color(i, 35, 184, 90);
+            }
             // WASD
             rgb_matrix_set_color(27, 35, 184, 90);
             rgb_matrix_set_color(20, 35, 184, 90);
