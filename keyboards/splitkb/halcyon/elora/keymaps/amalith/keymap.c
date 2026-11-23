@@ -88,25 +88,129 @@ const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = { 0, 1, 2 };
 #endif
 
 // RGB Lighting
-// TODO: add more granular RGB once keymaps are settled.
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    for (uint8_t i = led_min; i < led_max; i++) {
+        rgb_matrix_set_color(i, 83, 54, 231);
+    }
+    // Number keys
+    for (uint8_t i = 31; i <= 35; i++) {
+        rgb_matrix_set_color(i, 54, 113, 231);
+    }
+    for (uint8_t i = 68; i <= 72; i++) {
+        rgb_matrix_set_color(i, 54, 113, 231);
+    }
+    // F5
+    rgb_matrix_set_color(73, 218, 68, 100);
+    // Ctrl, Shift, Tab
+    rgb_matrix_set_color(61, 150, 31, 255);
+    rgb_matrix_set_color(30, 150, 31, 255);
+    rgb_matrix_set_color(24, 150, 31, 255);
+    rgb_matrix_set_color(18, 150, 31, 255);
+    // CW
+    rgb_matrix_set_color(11, 150, 31, 255);
+    // Leader
+    rgb_matrix_set_color(10, 150, 31, 255);
+    // Space
+    rgb_matrix_set_color(8, 31, 229, 255);
+    rgb_matrix_set_color(45, 31, 229, 255);
+    // Layer
+    rgb_matrix_set_color(9, 180, 207, 254);
+    rgb_matrix_set_color(43, 180, 207, 254);
+    // Repeat
+    rgb_matrix_set_color(7, 0, 219, 86);
+    // Enter
+    rgb_matrix_set_color(44, 0, 219, 86);
+    // Screenshot
+    rgb_matrix_set_color(47, 0, 219, 86);
+    // Esc, Del, Bksc
+    rgb_matrix_set_color(6, 255, 0, 0);
+    rgb_matrix_set_color(46, 255, 0, 0);
+    rgb_matrix_set_color(48, 255, 0, 0);
     switch(get_highest_layer(layer_state|default_layer_state)) {
-            case 2:
-                for (uint8_t i = led_min; i < led_max; i++) {
-                    rgb_matrix_set_color(i, 255,191,0);
-                }
-                break;
-            case 1:
-                for (uint8_t i = led_min; i < led_max; i++) {
-                    rgb_matrix_set_color(i, 15,82,186);
-                }
-                break;
-            default:
-                for (uint8_t i = led_min; i < led_max; i++) {
-                    rgb_matrix_set_color(i, 108,59,170);
-                }
-                rgb_matrix_set_color(31, 255, 0, 0);
-                break;
+        case 2:
+            // ALT-F4
+            rgb_matrix_set_color(73, 255, 0, 0);
+            // Undo Redo
+            rgb_matrix_set_color(36, 255, 123, 122);
+            rgb_matrix_set_color(30, 255, 123, 122);
+            // WASD
+            rgb_matrix_set_color(27, 15, 82, 186);
+            rgb_matrix_set_color(20, 15, 82, 186);
+            rgb_matrix_set_color(21, 15, 82, 186);
+            rgb_matrix_set_color(22, 15, 82, 186);
+            // Home End
+            rgb_matrix_set_color(67, 15, 82, 186);
+            rgb_matrix_set_color(73, 15, 82, 186);
+            // Numpad
+            rgb_matrix_set_color(63, 15, 82, 186);
+            rgb_matrix_set_color(64, 15, 82, 186);
+            rgb_matrix_set_color(65, 15, 82, 186);
+            rgb_matrix_set_color(57, 15, 82, 186);
+            rgb_matrix_set_color(58, 15, 82, 186);
+            rgb_matrix_set_color(59, 15, 82, 186);
+            rgb_matrix_set_color(51, 15, 82, 186);
+            rgb_matrix_set_color(52, 15, 82, 186);
+            rgb_matrix_set_color(53, 15, 82, 186);
+            rgb_matrix_set_color(61, 15, 82, 186);
+            rgb_matrix_set_color(54, 15, 82, 186);
+            // Lang Keys
+            rgb_matrix_set_color(33, 152, 236, 141);
+            rgb_matrix_set_color(34, 152, 236, 141);
+            rgb_matrix_set_color(35, 152, 236, 141);
+            // Search Keys
+            rgb_matrix_set_color(25, 241, 194, 136);
+            rgb_matrix_set_color(19, 241, 194, 136);
+            rgb_matrix_set_color(13, 241, 194, 136);
+            // Shortcuts
+            rgb_matrix_set_color(26, 255, 102, 183);
+            rgb_matrix_set_color(28, 255, 102, 183);
+            rgb_matrix_set_color(29, 255, 102, 183);
+            rgb_matrix_set_color(23, 255, 102, 183);
+            rgb_matrix_set_color(13, 255, 102, 183);
+            rgb_matrix_set_color(14, 255, 102, 183);
+            rgb_matrix_set_color(15, 255, 102, 183);
+            rgb_matrix_set_color(16, 255, 102, 183);
+            // Keycodes
+            rgb_matrix_set_color(66, 54, 113, 231);
+            rgb_matrix_set_color(62, 54, 113, 231);
+            rgb_matrix_set_color(60, 54, 113, 231);
+            rgb_matrix_set_color(56, 54, 113, 231);
+            rgb_matrix_set_color(50, 54, 113, 231);
+            //F Keys
+            for (uint8_t i = 68; i <= 72; i++) {
+                rgb_matrix_set_color(i, 234, 144, 165);
+            }
+            break;
+        case 1:
+            // WASD
+            rgb_matrix_set_color(27, 95, 31, 168);
+            rgb_matrix_set_color(20, 95, 31, 168);
+            rgb_matrix_set_color(21, 95, 31, 168);
+            rgb_matrix_set_color(22, 95, 31, 168);
+            // LALT
+            rgb_matrix_set_color(7, 150, 31, 255);
+            //Shift, Ctrl
+            rgb_matrix_set_color(23, 150, 31, 255);
+            rgb_matrix_set_color(24, 150, 31, 255);
+            // Swap
+            rgb_matrix_set_color(11, 180, 207, 254);
+            // Repeat
+            rgb_matrix_set_color(12, 0, 219, 86);
+            //Priority Keys
+            rgb_matrix_set_color(25, 255, 102, 183);
+            rgb_matrix_set_color(26, 255, 102, 183);
+            rgb_matrix_set_color(28, 255, 102, 183);
+            rgb_matrix_set_color(29, 255, 102, 183);
+            rgb_matrix_set_color(19, 255, 102, 183);
+            rgb_matrix_set_color(17, 255, 102, 183);
+            rgb_matrix_set_color(18, 255, 102, 183);
+            //Sub Keys
+            for (uint8_t i = 13; i <= 16; i++) {
+                rgb_matrix_set_color(i, 243, 133, 255);
+            }
+            break;
+        default:
+            break;
     }
     return false;
 }
