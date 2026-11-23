@@ -123,44 +123,44 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 //Leader keycodes
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_A, KC_1)) {
-        UC(0x101);
+        send_unicode(0x101);
     } else if (leader_sequence_two_keys(KC_E, KC_1)) {
-        UC(0x113);
+        send_unicode(0x113);
     } else if (leader_sequence_two_keys(KC_I, KC_1)) {
-        UC(0x12B);
+        send_unicode(0x12B);
     } else if (leader_sequence_two_keys(KC_O, KC_1)) {
-        UC(0x14D);
+        send_unicode(0x14D);
     } else if (leader_sequence_two_keys(KC_U, KC_1)) {
-        UC(0x16B);
+        send_unicode(0x16B);
     } else if (leader_sequence_two_keys(KC_A, KC_2)) {
-        UC(0xE1);
+        send_unicode(0xE1);
     } else if (leader_sequence_two_keys(KC_E, KC_2)) {
-        UC(0xE9);
+        send_unicode(0xE9);
     } else if (leader_sequence_two_keys(KC_I, KC_2)) {
-        UC(0xED);
+        send_unicode(0xED);
     } else if (leader_sequence_two_keys(KC_O, KC_2)) {
-        UC(0xF3);
+        send_unicode(0xF3);
     } else if (leader_sequence_two_keys(KC_U, KC_2)) {
-        UC(0xFA);
+        send_unicode(0xFA);
     } else if (leader_sequence_two_keys(KC_A, KC_3)) {
-        UC(0x1CE);
+        send_unicode(0x1CE);
     } else if (leader_sequence_two_keys(KC_E, KC_3)) {
-        UC(0x11B);
+        send_unicode(0x11B);
     } else if (leader_sequence_two_keys(KC_I, KC_3)) {
-        UC(0x1D0);
+        send_unicode(0x1D0);
     } else if (leader_sequence_two_keys(KC_O, KC_3)) {
-        UC(0x1D2);
+        send_unicode(0x1D2);
     } else if (leader_sequence_two_keys(KC_U, KC_3)) {
-        UC(0x1D4);
+        send_unicode(0x1D4);
     } else if (leader_sequence_two_keys(KC_A, KC_4)) {
-        UC(0xE0);
+        send_unicode(0xE0);
     } else if (leader_sequence_two_keys(KC_E, KC_4)) {
-        UC(0xE8);
+        send_unicode(0xE8);
     } else if (leader_sequence_two_keys(KC_I, KC_4)) {
-        UC(0xEC);
+        send_unicode(0xEC);
     } else if (leader_sequence_two_keys(KC_O, KC_4)) {
-        UC(0xF2);
+        send_unicode(0xF2);
     } else if (leader_sequence_two_keys(KC_U, KC_4)) {
-        UC(0xF9);
+        send_unicode(0xF9);
     }
 }
