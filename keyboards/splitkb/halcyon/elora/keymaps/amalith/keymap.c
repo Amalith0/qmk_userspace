@@ -102,9 +102,10 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                 }
                 break;
             default:
-            for (uint8_t i = led_min; i < led_max; i++) {
+                for (uint8_t i = led_min; i < led_max; i++) {
                     rgb_matrix_set_color(i, 108,59,170);
                 }
+                rgb_matrix_set_color(31, 255, 0, 0);
                 break;
     }
     return false;
@@ -126,45 +127,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 //Leader keycodes
 void leader_end_user(void) {
-    if (leader_sequence_two_keys(KC_A, KC_1)) {
-        send_unicode_string("ā");
-    } else if (leader_sequence_two_keys(KC_E, KC_1)) {
-        send_unicode_string("ē");
-    } else if (leader_sequence_two_keys(KC_I, KC_1)) {
-        send_unicode_string("ī");
-    } else if (leader_sequence_two_keys(KC_O, KC_1)) {
-        send_unicode_string("ō");
-    } else if (leader_sequence_two_keys(KC_U, KC_1)) {
-        send_unicode_string("ū");
-    } else if (leader_sequence_two_keys(KC_A, KC_2)) {
-        send_unicode_string("á");
-    } else if (leader_sequence_two_keys(KC_E, KC_2)) {
-        send_unicode_string("é");
-    } else if (leader_sequence_two_keys(KC_I, KC_2)) {
-        send_unicode_string("í");
-    } else if (leader_sequence_two_keys(KC_O, KC_2)) {
-        send_unicode_string("ó");
-    } else if (leader_sequence_two_keys(KC_U, KC_2)) {
-        send_unicode_string("ú");
-    } else if (leader_sequence_two_keys(KC_A, KC_3)) {
-        send_unicode_string("ǎ");
-    } else if (leader_sequence_two_keys(KC_E, KC_3)) {
-        send_unicode_string("ě");
-    } else if (leader_sequence_two_keys(KC_I, KC_3)) {
-        send_unicode_string("ǐ");
-    } else if (leader_sequence_two_keys(KC_O, KC_3)) {
-        send_unicode_string("ǒ");
-    } else if (leader_sequence_two_keys(KC_U, KC_3)) {
-        send_unicode_string("ǔ");
-    } else if (leader_sequence_two_keys(KC_A, KC_4)) {
-        send_unicode_string("à");
-    } else if (leader_sequence_two_keys(KC_E, KC_4)) {
-        send_unicode_string("è");
-    } else if (leader_sequence_two_keys(KC_I, KC_4)) {
-        send_unicode_string("ì");
-    } else if (leader_sequence_two_keys(KC_O, KC_4)) {
-        send_unicode_string("ò");
-    } else if (leader_sequence_two_keys(KC_U, KC_4)) {
-        send_unicode_string("ù");
-    }
+
 }
