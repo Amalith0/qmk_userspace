@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    - - - - - -         - - - - - -
 //            - - - - - - - -
 
-    [_QWERTY] = LAYOUT_elora_hlc(
+    [_QWERTY] = LAYOUT(
      KC_GRAVE, KC_1 ,  KC_2   , KC_3  ,   KC_4     ,   KC_5 ,                                        KC_6 ,  KC_7 ,  KC_8 ,   KC_9 ,  KC_0 ,  KC_F5,
      KC_TAB  , KC_Q ,  KC_W   , KC_E  ,   KC_R     ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_QUOT,
      KC_LSFT , KC_A ,  KC_S   , KC_D  ,   KC_F     ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,KC_RSFT,
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      MT(MOD_LALT, G(KC_TAB)), KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MPLY, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
-    [_GAME] = LAYOUT_elora_hlc(
+    [_GAME] = LAYOUT(
      _______  , _______ ,  _______   ,  _______  ,   _______ ,   _______ ,                                        _______ ,  _______ ,  _______ ,   _______ ,  _______ , _______ ,
      KC_T  ,KC_TAB,KC_Q,  KC_W,   KC_E ,   KC_R ,                                        _______,   _______ ,  _______ ,   _______ ,  _______ , _______,
      KC_LCTL , KC_LSFT ,  KC_A   ,  KC_S ,   KC_D ,   KC_F ,                                        _______,   _______ ,  _______ ,   _______ ,  _______ , _______,
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                _______, KC_NO, KC_NO, KC_NO, KC_NO
     ),
 
-    [_SYMBOLS] = LAYOUT_elora_hlc(
+    [_SYMBOLS] = LAYOUT(
         LCTL(KC_Y) , C(S(KC_1))   ,  C(S(KC_2))    ,  C(S(KC_3))  ,   _______    ,   LALT(KC_F4) ,                                                 KC_F6 ,  KC_F7 ,  KC_F8 ,  KC_F9  ,  KC_F10 , KC_HOME ,
         LCTL(KC_Z) , LCTL(KC_A)   ,  LCTL(KC_I)  ,     KC_UP     ,    LALT(KC_TAB)   ,   KC_F1 ,                                                 LSFT(KC_BSLS),   KC_KP_7,  KC_KP_8 ,   KC_KP_9 , LSG(KC_MINUS), KC_END,
         _______ , LCTL(KC_S)   ,  KC_LEFT    ,      KC_DOWN    ,   KC_RGHT    ,   KC_PAUSE ,                                                 KC_MINS,   KC_KP_4 ,  KC_KP_5 ,   KC_KP_6 , KC_BSLS , KC_TAB,
@@ -113,7 +113,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-// Leader keycodes
+//Leader keycodes
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_A, KC_1)) {
         UC(0x101);
