@@ -90,18 +90,22 @@ const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = { 0, 1, 2 };
 // RGB Lighting
 // TODO: add more granular RGB once keymaps are settled.
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    for (uint8_t i = led_min; i < led_max; i++) {
-        switch(get_highest_layer(layer_state|default_layer_state)) {
+    switch(get_highest_layer(layer_state|default_layer_state)) {
             case 2:
+                for (uint8_t i = led_min; i < led_max; i++) {
                 rgb_matrix_set_color(i, 255,191,0);
+                }
                 break;
             case 1:
-                rgb_matrix_set_color(i, 15,82,186);
+                for (uint8_t i = led_min; i < led_max; i++) {
+                    rgb_matrix_set_color(i, 15,82,186);
+                }
                 break;
             default:
-                rgb_matrix_set_color(i, 108,59,170);
+            for (uint8_t i = led_min; i < led_max; i++) {
+                    rgb_matrix_set_color(i, 108,59,170);
+                }
                 break;
-        }
     }
     return false;
 }
@@ -123,44 +127,44 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 //Leader keycodes
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_A, KC_1)) {
-        send_unicode(0x101);
+        send_unicode_string("ā");
     } else if (leader_sequence_two_keys(KC_E, KC_1)) {
-        send_unicode(0x113);
+        send_unicode_string("ē");
     } else if (leader_sequence_two_keys(KC_I, KC_1)) {
-        send_unicode(0x12B);
+        send_unicode_string("ī");
     } else if (leader_sequence_two_keys(KC_O, KC_1)) {
-        send_unicode(0x14D);
+        send_unicode_string("ō");
     } else if (leader_sequence_two_keys(KC_U, KC_1)) {
-        send_unicode(0x16B);
+        send_unicode_string("ū");
     } else if (leader_sequence_two_keys(KC_A, KC_2)) {
-        send_unicode(0xE1);
+        send_unicode_string("á");
     } else if (leader_sequence_two_keys(KC_E, KC_2)) {
-        send_unicode(0xE9);
+        send_unicode_string("é");
     } else if (leader_sequence_two_keys(KC_I, KC_2)) {
-        send_unicode(0xED);
+        send_unicode_string("í");
     } else if (leader_sequence_two_keys(KC_O, KC_2)) {
-        send_unicode(0xF3);
+        send_unicode_string("ó");
     } else if (leader_sequence_two_keys(KC_U, KC_2)) {
-        send_unicode(0xFA);
+        send_unicode_string("ú");
     } else if (leader_sequence_two_keys(KC_A, KC_3)) {
-        send_unicode(0x1CE);
+        send_unicode_string("ǎ");
     } else if (leader_sequence_two_keys(KC_E, KC_3)) {
-        send_unicode(0x11B);
+        send_unicode_string("ě");
     } else if (leader_sequence_two_keys(KC_I, KC_3)) {
-        send_unicode(0x1D0);
+        send_unicode_string("ǐ");
     } else if (leader_sequence_two_keys(KC_O, KC_3)) {
-        send_unicode(0x1D2);
+        send_unicode_string("ǒ");
     } else if (leader_sequence_two_keys(KC_U, KC_3)) {
-        send_unicode(0x1D4);
+        send_unicode_string("ǔ");
     } else if (leader_sequence_two_keys(KC_A, KC_4)) {
-        send_unicode(0xE0);
+        send_unicode_string("à");
     } else if (leader_sequence_two_keys(KC_E, KC_4)) {
-        send_unicode(0xE8);
+        send_unicode_string("è");
     } else if (leader_sequence_two_keys(KC_I, KC_4)) {
-        send_unicode(0xEC);
+        send_unicode_string("ì");
     } else if (leader_sequence_two_keys(KC_O, KC_4)) {
-        send_unicode(0xF2);
+        send_unicode_string("ò");
     } else if (leader_sequence_two_keys(KC_U, KC_4)) {
-        send_unicode(0xF9);
+        send_unicode_string("ù");
     }
 }
