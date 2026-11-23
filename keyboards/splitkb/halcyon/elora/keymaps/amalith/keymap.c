@@ -93,7 +93,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     switch(get_highest_layer(layer_state|default_layer_state)) {
             case 2:
                 for (uint8_t i = led_min; i < led_max; i++) {
-                rgb_matrix_set_color(i, 255,191,0);
+                    rgb_matrix_set_color(i, 255,191,0);
                 }
                 break;
             case 1:
