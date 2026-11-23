@@ -8,7 +8,3 @@
 // RGB
 #define RGB_MATRIX_TIMEOUT 1800000
 #define RGB_MATRIX_DEFAULT_VAL 30
-
-// Dynamic macros
-
-#define DYNAMIC_MACRO_DELAY 50
