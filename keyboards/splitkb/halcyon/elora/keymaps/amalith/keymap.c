@@ -119,45 +119,45 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Leader keycodes
 void leader_end_user(void) {
-    if (leader_sequence_two_keys(KC_1, KC_A)) {
+    if (leader_sequence_two_keys(KC_A, KC_1)) {
         SEND_STRING(UC(0x101));
-    } else if (leader_sequence_two_keys(KC_1, KC_E)) {
+    } else if (leader_sequence_two_keys(KC_E, KC_1)) {
         SEND_STRING(UC(0x113));
-    } else if (leader_sequence_two_keys(KC_1, KC_I)) {
+    } else if (leader_sequence_two_keys(KC_I, KC_1)) {
         SEND_STRING(UC(0x12B));
-    } else if (leader_sequence_two_keys(KC_1, KC_O)) {
+    } else if (leader_sequence_two_keys(KC_O, KC_1)) {
         SEND_STRING(UC(0x14D));
-    } else if (leader_sequence_two_keys(KC_1, KC_U)) {
+    } else if (leader_sequence_two_keys(KC_U, KC_1)) {
         SEND_STRING(UC(0x16B));
-    } else if (leader_sequence_two_keys(KC_2, KC_A)) {
+    } else if (leader_sequence_two_keys(KC_A, KC_2)) {
         SEND_STRING(UC(0xE1));
-    } else if (leader_sequence_two_keys(KC_2, KC_E)) {
+    } else if (leader_sequence_two_keys(KC_E, KC_2)) {
         SEND_STRING(UC(0xE9));
-    } else if (leader_sequence_two_keys(KC_2, KC_I)) {
+    } else if (leader_sequence_two_keys(KC_I, KC_2)) {
         SEND_STRING(UC(0xED));
-    } else if (leader_sequence_two_keys(KC_2, KC_O)) {
+    } else if (leader_sequence_two_keys(KC_O, KC_2)) {
         SEND_STRING(UC(0xF3));
-    } else if (leader_sequence_two_keys(KC_2, KC_U)) {
+    } else if (leader_sequence_two_keys(KC_U, KC_2)) {
         SEND_STRING(UC(0xFA));
-    } else if (leader_sequence_two_keys(KC_3, KC_A)) {
+    } else if (leader_sequence_two_keys(KC_A, KC_3)) {
         SEND_STRING(UC(0x1CE));
-    } else if (leader_sequence_two_keys(KC_3, KC_E)) {
+    } else if (leader_sequence_two_keys(KC_E, KC_3)) {
         SEND_STRING(UC(0x11B));
-    } else if (leader_sequence_two_keys(KC_3, KC_I)) {
+    } else if (leader_sequence_two_keys(KC_I, KC_3)) {
         SEND_STRING(UC(0x1D0));
-    } else if (leader_sequence_two_keys(KC_3, KC_O)) {
+    } else if (leader_sequence_two_keys(KC_O, KC_3)) {
         SEND_STRING(UC(0x1D2));
-    } else if (leader_sequence_two_keys(KC_3, KC_U)) {
+    } else if (leader_sequence_two_keys(KC_U, KC_3)) {
         SEND_STRING(UC(0x1D4));
-    } else if (leader_sequence_two_keys(KC_4, KC_A)) {
+    } else if (leader_sequence_two_keys(KC_A, KC_4)) {
         SEND_STRING(UC(0xE0));
-    } else if (leader_sequence_two_keys(KC_4, KC_E)) {
+    } else if (leader_sequence_two_keys(KC_E, KC_4)) {
         SEND_STRING(UC(0xE8));
-    } else if (leader_sequence_two_keys(KC_4, KC_I)) {
+    } else if (leader_sequence_two_keys(KC_I, KC_4)) {
         SEND_STRING(UC(0xEC));
-    } else if (leader_sequence_two_keys(KC_4, KC_O)) {
+    } else if (leader_sequence_two_keys(KC_O, KC_4)) {
         SEND_STRING(UC(0xF2));
-    } else if (leader_sequence_two_keys(KC_4, KC_U)) {
+    } else if (leader_sequence_two_keys(KC_U, KC_4)) {
         SEND_STRING(UC(0xF9));
     }
 }
