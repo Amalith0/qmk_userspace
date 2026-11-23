@@ -129,30 +129,30 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     switch(get_highest_layer(layer_state|default_layer_state)) {
         case 2:
             // ALT-F4
-            rgb_matrix_set_color(73, 255, 0, 0);
+            rgb_matrix_set_color(31, 255, 0, 0);
             // Undo Redo
             rgb_matrix_set_color(36, 255, 123, 122);
             rgb_matrix_set_color(30, 255, 123, 122);
             // WASD
-            rgb_matrix_set_color(27, 15, 82, 186);
-            rgb_matrix_set_color(20, 15, 82, 186);
-            rgb_matrix_set_color(21, 15, 82, 186);
-            rgb_matrix_set_color(22, 15, 82, 186);
+            rgb_matrix_set_color(27, 231, 235, 0);
+            rgb_matrix_set_color(20, 231, 235, 0);
+            rgb_matrix_set_color(21, 231, 235, 0);
+            rgb_matrix_set_color(22, 231, 235, 0);
             // Home End
-            rgb_matrix_set_color(67, 15, 82, 186);
-            rgb_matrix_set_color(73, 15, 82, 186);
+            rgb_matrix_set_color(67, 231, 235, 0);
+            rgb_matrix_set_color(73, 231, 235, 0);
             // Numpad
-            rgb_matrix_set_color(63, 15, 82, 186);
-            rgb_matrix_set_color(64, 15, 82, 186);
-            rgb_matrix_set_color(65, 15, 82, 186);
-            rgb_matrix_set_color(57, 15, 82, 186);
-            rgb_matrix_set_color(58, 15, 82, 186);
-            rgb_matrix_set_color(59, 15, 82, 186);
-            rgb_matrix_set_color(51, 15, 82, 186);
-            rgb_matrix_set_color(52, 15, 82, 186);
-            rgb_matrix_set_color(53, 15, 82, 186);
-            rgb_matrix_set_color(61, 15, 82, 186);
-            rgb_matrix_set_color(54, 15, 82, 186);
+            rgb_matrix_set_color(63, 231, 235, 0);
+            rgb_matrix_set_color(64, 231, 235, 0);
+            rgb_matrix_set_color(65, 231, 235, 0);
+            rgb_matrix_set_color(57, 231, 235, 0);
+            rgb_matrix_set_color(58, 231, 235, 0);
+            rgb_matrix_set_color(59, 231, 235, 0);
+            rgb_matrix_set_color(51, 231, 235, 0);
+            rgb_matrix_set_color(52, 231, 235, 0);
+            rgb_matrix_set_color(53, 231, 235, 0);
+            rgb_matrix_set_color(61, 231, 235, 0);
+            rgb_matrix_set_color(54, 231, 235, 0);
             // Lang Keys
             rgb_matrix_set_color(33, 152, 236, 141);
             rgb_matrix_set_color(34, 152, 236, 141);
@@ -166,7 +166,6 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(28, 255, 102, 183);
             rgb_matrix_set_color(29, 255, 102, 183);
             rgb_matrix_set_color(23, 255, 102, 183);
-            rgb_matrix_set_color(13, 255, 102, 183);
             rgb_matrix_set_color(14, 255, 102, 183);
             rgb_matrix_set_color(15, 255, 102, 183);
             rgb_matrix_set_color(16, 255, 102, 183);
@@ -183,15 +182,16 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             break;
         case 1:
             // WASD
-            rgb_matrix_set_color(27, 95, 31, 168);
-            rgb_matrix_set_color(20, 95, 31, 168);
-            rgb_matrix_set_color(21, 95, 31, 168);
-            rgb_matrix_set_color(22, 95, 31, 168);
+            rgb_matrix_set_color(27, 35, 184, 90);
+            rgb_matrix_set_color(20, 35, 184, 90);
+            rgb_matrix_set_color(21, 35, 184, 90);
+            rgb_matrix_set_color(22, 35, 184, 90);
             // LALT
             rgb_matrix_set_color(7, 150, 31, 255);
-            //Shift, Ctrl
+            //Shift, Ctrl, Tab
             rgb_matrix_set_color(23, 150, 31, 255);
             rgb_matrix_set_color(24, 150, 31, 255);
+            rgb_matrix_set_color(29, 150, 31, 255);
             // Swap
             rgb_matrix_set_color(11, 180, 207, 254);
             // Repeat
@@ -200,12 +200,12 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(25, 255, 102, 183);
             rgb_matrix_set_color(26, 255, 102, 183);
             rgb_matrix_set_color(28, 255, 102, 183);
-            rgb_matrix_set_color(29, 255, 102, 183);
+            rgb_matrix_set_color(30, 255, 102, 183);
             rgb_matrix_set_color(19, 255, 102, 183);
-            rgb_matrix_set_color(17, 255, 102, 183);
-            rgb_matrix_set_color(18, 255, 102, 183);
+            rgb_matrix_set_color(13, 255, 102, 183);
+            rgb_matrix_set_color(14, 255, 102, 183);
             //Sub Keys
-            for (uint8_t i = 13; i <= 16; i++) {
+            for (uint8_t i = 15; i <= 18; i++) {
                 rgb_matrix_set_color(i, 243, 133, 255);
             }
             break;
