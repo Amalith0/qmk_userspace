@@ -77,7 +77,7 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 #if defined(SWAP_HANDS_ENABLE) && defined(ENCODER_MAP_ENABLE)
-const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = { 0, 1, 2, 3 };
+const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = { 0, 1, 2 };
 #endif
 
 // RGB Lighting
