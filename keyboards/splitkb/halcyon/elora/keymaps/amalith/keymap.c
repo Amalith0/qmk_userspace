@@ -49,14 +49,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Soldered left, halycon left, soldered right, halycon right
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(LSFT(KC_TAB), KC_TAB),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
+    [0] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(S(A(KC_TAB)), A(KC_TAB)),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
     [1] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
     [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
 #if defined (HALCYON_ENABLE)
 const uint16_t left_halcyon_buttons[10][5] = {
-    [_QWERTY] =     { MT(MOD_LALT, G(KC_TAB)), _______, _______, _______, _______ },
+    [_QWERTY] =     { G(KC_TAB), _______, _______, _______, _______ },
     [_GAME] =     { _______, _______, _______, _______, _______ },
     [_SYMBOLS] = { _______, _______, _______, _______, _______ }
 };
@@ -227,20 +227,6 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             break;
     }
     return false;
-}
-
-// Keycode overrides
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        // Make mod-tap modifier work.
-        case MT(MOD_LALT, G(KC_TAB)):
-            if (record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_TAB)); 
-                return false;
-            }
-            break;
-    }
-    return true;
 }
 
 //Leader keycodes
